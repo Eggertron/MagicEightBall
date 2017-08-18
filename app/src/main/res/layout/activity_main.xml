@@ -19,7 +19,8 @@
         android:layout_height="wrap_content"
         android:text="Get Response"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/text_main"
+        android:layout_below="@id/imageView"
+        android:visibility="invisible"
         />
 
     <TextView
@@ -27,10 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Press Button"
+        android:text="Tap Magic 8 Ball"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        android:maxWidth="150dp"
+        android:maxWidth="150sp"
         android:gravity="center"
         />
 
