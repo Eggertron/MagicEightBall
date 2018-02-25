@@ -1,4 +1,4 @@
-package com.example.edgar.magiceightball;
+package com.edgarhandev.edgar.magiceightball;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

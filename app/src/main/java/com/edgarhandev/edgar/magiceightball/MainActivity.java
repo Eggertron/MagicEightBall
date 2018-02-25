@@ -1,14 +1,14 @@
-package com.example.edgar.magiceightball;
+package com.edgarhandev.edgar.magiceightball;
 
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,11 +16,18 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView textView;
     ImageView imageView;
+    final String YOUR_ADMOB_APP_ID = "ca-app-pub-5445092696369420~4718377742";
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, YOUR_ADMOB_APP_ID);
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         magicEightBall = new MagicEightBall();
         textView = (TextView)findViewById(R.id.text_main);
