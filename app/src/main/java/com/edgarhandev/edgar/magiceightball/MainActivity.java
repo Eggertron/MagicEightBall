@@ -2,6 +2,7 @@ package com.edgarhandev.edgar.magiceightball;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -45,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
                 getResponse();
             }
         });
+
+        TextView privacy_policy_link = (TextView) findViewById(R.id.privacy_policy_link);
+        privacy_policy_link.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     void getResponse() {

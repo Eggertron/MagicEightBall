@@ -11,7 +11,7 @@ public class MagicEightBall {
     private String answers[] = {
             "It is certain",
             "It is decidedly so",
-            "Wightout a doubt",
+            "Without a doubt",
             "Yes definitely",
             "You may rely on it",
             "As I see it, yes",
